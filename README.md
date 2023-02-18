@@ -2,7 +2,7 @@
 a svelte component chess pgn reader
 
 ![bsd](https://img.shields.io/badge/license-BSD-brightgreen)
-
+![issues](https://img.shields.io/github/issues/soycid/svelte-chess-pgn)
 ## Overview
 
 
