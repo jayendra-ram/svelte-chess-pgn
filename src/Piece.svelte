@@ -12,6 +12,7 @@
     'b': 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Chess_blt45.svg',
     'n': 'https://upload.wikimedia.org/wikipedia/commons/7/70/Chess_nlt45.svg',
     'p': 'https://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg',
+    '_' : ''
   }
 	
 	// Preload images

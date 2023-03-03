@@ -1,4 +1,3 @@
-function for pieces to FEN
 <!-- 
 <FEN> ::=  <Piece Placement>
        ' ' <Side to move>
@@ -12,16 +11,23 @@ function for pieces to FEN
   import { Canvas } from 'svelte-canvas'
   import Board from './Board.svelte'
   import Piece from './Piece.svelte'
-	import {start,pieces} from './chess.js'
+	import {start,pieces,board} from './chess.js'
 	
 	const width = 800, height = 800
 
-	console.log(pieces)
 </script>
+
+function for pieces to FEN
+
+{board[0].name}
+{board[0].rank}
+{board[0].file}
 
 <Canvas {width} {height}>
 	<Board />
-	{#each pieces as [name, file, rank]}
+  <Board />
+	{#each board as [name, rank, file]}
 		<Piece {name} {file} {rank} />
 	{/each}
+
 </Canvas>
