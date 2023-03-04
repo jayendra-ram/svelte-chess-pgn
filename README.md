@@ -7,3 +7,14 @@ a svelte component chess pgn reader
 
 
 if you have a svelte-based blog, let's you show off your epic chess games.
+
+## Todo
+
+> FEN to Board representation
+> PGN to FEN state machine
+> WTM/BTM
+> colors
+> viewer
+> tests
+> movable pieces
+> move highlighting
