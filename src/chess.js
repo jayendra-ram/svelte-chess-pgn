@@ -15,7 +15,7 @@ function FENtoBoard(FEN) {
   board.forEach(function(item,i) { board[i] = [item, Math.floor(i/8),  i%8]})
   return board}
 
-  function pgnToFen(pgnMoves, fen) {
+function pgnToFen(pgnMoves, fen) {
     let board = fen.split(" ")[0];
     let activeColor = fen.split(" ")[1];
     let castleAvailability = fen.split(" ")[2];
