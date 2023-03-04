@@ -17,6 +17,4 @@ jobs:
 
       - name: Check code-style
         uses: creyD/prettier_action@v4.2
-        with:
-          dry: true
-          prettier_options: --check **/*.{md,yml}
+
