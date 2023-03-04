@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1677896824332" clover="3.2.0">
-  <project timestamp="1677896824332" name="All files">
+<coverage generated="1677897123653" clover="3.2.0">
+  <project timestamp="1677897123653" name="All files">
     <metrics statements="74" coveredstatements="47" conditionals="34" coveredconditionals="14" methods="7" coveredmethods="7" elements="115" coveredelements="68" complexity="0" loc="74" ncloc="74" packages="1" files="2" classes="2"/>
     <file name="chess.js" path="/Users/jayram/projects/svelte-chess-pgn/src/chess.js">
       <metrics statements="73" coveredstatements="47" conditionals="34" coveredconditionals="14" methods="7" coveredmethods="7"/>
