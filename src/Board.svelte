@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Layer } from 'svelte-canvas'
 	import {squareSize} from './chess.js'
   const light = '#eed4ac'
