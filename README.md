@@ -11,6 +11,12 @@ a svelte component chess pgn reader
 
 if you have a svelte-based blog, let's you show off your epic chess games.
 
+## Installation
+
+```
+npm install svelte-chess-pgn
+```
+
 ## Todo
 
 > FEN to Board representation
