@@ -17,6 +17,21 @@ if you have a svelte-based blog, let's you show off your epic chess games.
 npm install svelte-chess-pgn
 ```
 
+
+## Quickstart
+
+in your import statement:
+
+```js
+import {PgnReader} from svelte-chess;
+```
+
+in the <main> tag:
+
+```js
+<PgnReader/>
+```
+
 ## Todo
 
 > FEN to Board representation
