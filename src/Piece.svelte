@@ -23,14 +23,18 @@
 
 <script>
   import { Layer } from 'svelte-canvas'
-	import {squareSize} from './chess.js'
+	import {squareSize} from './chess_utils.js'
 
-  export let name, file, rank
+  export let name
 
   const image = new Image(squareSize, squareSize)
   image.src = images[name]
-
-  $: render = ({ context }) => context.drawImage(image, file * squareSize, rank * squareSize, squareSize, squareSize)
+  const image_url = images[name]
 </script>
 
-<Layer {render} />
+<div class="piece">
+  
+  {#if name != '_'}
+      <img src={image_url} alt='piece'/>
+  {/if}
+</div>
