@@ -1,4 +1,3 @@
-TODO
 
 ## prequesties
 node, sveltekit
