@@ -1,5 +1,6 @@
 const squareSize = 20;
 
+
 function FENtoBoard(FEN) {
   let board = FEN.split(" ")[0].split("/");
   board.forEach(function (item, i) {
