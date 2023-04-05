@@ -20,6 +20,11 @@ if you have a svelte-based blog, let's you show off your epic chess games.
 npm install svelte-chess-pgn
 ```
 
+## Demo
+
+This is what the PGN reader looks like by default:
+
+<img width="584" alt="Screen Shot 2023-04-04 at 11 57 19 PM" src="https://user-images.githubusercontent.com/42985072/229977476-e53143a9-d804-4965-9f39-e706091a656d.png">
 
 ## Quickstart
 
