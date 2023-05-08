@@ -9,19 +9,19 @@ jobs:
   prettier:
     runs-on: ubuntu-latest
     steps:
-    - name: Check out repo
-      uses: actions/checkout@v2
-    - uses: actions/cache@v2
-      name: Configure npm caching
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-npm-${{ hashFiles('**/workflows/prettier.yml') }}
-        restore-keys: |
-          ${{ runner.os }}-npm-
-    - name: Run prettier
-      run: |-
-        npx prettier --write .
-  
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        name: Configure npm caching
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/workflows/prettier.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+      - name: Run prettier
+        run: |-
+          npx prettier --write .
+
   build:
     runs-on: ${{ matrix.os }}
 
@@ -29,26 +29,26 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         node-version: [14.x]
-    
+
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-        cache-dependency-path: package-lock.json
-    - name: Install dependencies
-      run: |
-        npm install
-    - name: Build 
-      run: |
-        npm run build
-    - name: Lint
-      run: |
-        npm run format
-    - name: Test
-      run: |
-        npm run test
-    - name: Upload coverage
-      uses: codecov/codecov-action@v3
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+          cache-dependency-path: package-lock.json
+      - name: Install dependencies
+        run: |
+          npm install
+      - name: Build
+        run: |
+          npm run build
+      - name: Lint
+        run: |
+          npm run format
+      - name: Test
+        run: |
+          npm run test
+      - name: Upload coverage
+        uses: codecov/codecov-action@v3

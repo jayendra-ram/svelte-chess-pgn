@@ -18,19 +18,19 @@ function Chessground(node, { config, initializer }) {
   };
 }
 
-
- /**
-   * Validates a FEN string.
-   * @param {string} fen - The FEN string to validate.
-   * @returns {boolean} True if the FEN string is valid, false otherwise.
-   */
- function validateFEN(fen) {
+/**
+ * Validates a FEN string.
+ * @param {string} fen - The FEN string to validate.
+ * @returns {boolean} True if the FEN string is valid, false otherwise.
+ */
+function validateFEN(fen) {
   const fenParts = fen.split(" ");
   if (fenParts.length !== 6) {
     return false;
   }
 
-  const [position, activeColor, castling, enPassant, halfMove, fullMove] = fenParts;
+  const [position, activeColor, castling, enPassant, halfMove, fullMove] =
+    fenParts;
 
   // Check position
   const rows = position.split("/");
@@ -76,7 +76,7 @@ function Chessground(node, { config, initializer }) {
   }
 
   return true;
-  }
+}
 
 /**
  * Loads a PGN string and updates the board with the resulting position.
@@ -90,7 +90,6 @@ function loadFEN() {
   }
   console.log(board);
 }
-
 
 /**
  * Parses a PGN string into an array of moves.
@@ -112,19 +111,18 @@ function fenToBoard(fen) {
   const [position] = fen.split(" ");
   const rows = position.split("/");
   const board = rows.map((row) => {
-      const newRow = [];
-      for (const char of row) {
+    const newRow = [];
+    for (const char of row) {
       if (isNaN(parseInt(char))) {
-          newRow.push(char);
+        newRow.push(char);
       } else {
-          newRow.push(...Array(parseInt(char)).fill('_'));
+        newRow.push(...Array(parseInt(char)).fill("_"));
       }
-      }
-      return newRow;
+    }
+    return newRow;
   });
   return board;
 }
-
 
 /**
  * Updates the board position based on an array of moves.
@@ -149,7 +147,5 @@ function updateBoard(moves) {
   const newFen = chess.fen();
   board = [...fenToBoard(newFen)];
 }
-
-
 
 export { Chessground, cgStylesHelper };
