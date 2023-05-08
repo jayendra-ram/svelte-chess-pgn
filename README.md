@@ -2,7 +2,6 @@
 
 a svelte component chess pgn reader
 
-
 ![bsd](https://img.shields.io/badge/license-BSD-brightgreen)
 ![issues](https://img.shields.io/github/issues/soycid/svelte-chess-pgn)
 [![Build Status](https://github.com/Soycid/svelte-chess-pgn/workflows/Build%20Status/badge.svg?branch=main)](https://github.com/Soycid/svelte-chess-pgn/actions?query=workflow%3A%22Build+Status%22)
@@ -19,6 +18,7 @@ if you have a svelte-based blog, let's you show off your epic chess games.
 ```
 npm install svelte-chess-pgn
 ```
+
 
 ## Demo
 
@@ -37,7 +37,7 @@ import {PgnReader} from svelte-chess;
 in the <main> tag:
 
 ```js
-<PgnReader/>
+<PgnReader />
 ```
 
 ## Todo

@@ -12,29 +12,36 @@
     'B': 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Chess_blt45.svg',
     'N': 'https://upload.wikimedia.org/wikipedia/commons/7/70/Chess_nlt45.svg',
     'P': 'https://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg',
-    '_' : ''
+    '_': 'https://upload.wikimedia.org/wikipedia/commons/1/1d/No_image.svg'
   }
-	
-	// Preload images
+
+  // Preload images
   for (const name in images) {
-    (new Image()).src = images[name]
+    (new Image()).src = images[name];
   }
 </script>
 
 <script>
-  import { Layer } from 'svelte-canvas'
-	import {squareSize} from './chess_utils.js'
+  import { Layer } from "svelte-canvas";
+  import { squareSize } from "./chess_utils.js";
 
-  export let name
+  export let name;
 
-  const image = new Image(squareSize, squareSize)
-  image.src = images[name]
-  const image_url = images[name]
+  let image_url;
+
+  // Update image_url reactively whenever 'name' changes
+  $: {
+    image_url = images[name];
+  }
 </script>
 
+<style>
+  .piece img {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
 <div class="piece">
-  
-  {#if name != '_'}
-      <img src={image_url} alt='piece'/>
-  {/if}
+  <img src={image_url} alt={name} />
 </div>
