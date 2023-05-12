@@ -31,22 +31,13 @@ This is what the PGN reader looks like by default:
 in your import statement:
 
 ```js
-import {PgnReader} from svelte-chess;
+import {PgnReader} from "svelte-chess-pgn";
 ```
 
 in the <main> tag:
 
 ```js
-<PgnReader />
+<PgnReader pgn={`(insert PGN here)`}/>
 ```
 
-## Todo
 
-> FEN to Board representation
-> PGN to FEN state machine
-> WTM/BTM
-> colors
-> viewer
-> tests
-> movable pieces
-> move highlighting
