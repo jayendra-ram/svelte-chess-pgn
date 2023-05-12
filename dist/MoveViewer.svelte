@@ -22,14 +22,17 @@
   let moveRefs = [];
 
   onMount(() => {
-    window.addEventListener('keydown', handleGlobalKeyDown);
-
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('keydown', handleGlobalKeyDown);
+    }
     scrollToSelectedMove();
   });
 
   afterUpdate(() => {
-    window.removeEventListener('keydown', handleGlobalKeyDown);
 
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('keydown', handleGlobalKeyDown);
+    }
     scrollToSelectedMove();
   });
 

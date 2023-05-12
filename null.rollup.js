@@ -33,7 +33,7 @@ function serve() {
 }
 
 export default {
-  input: "src/main.js",
+  input: "src/index.js",
   output: {
     sourcemap: true,
     format: "iife",
@@ -45,11 +45,19 @@ export default {
       compilerOptions: {
         // enable run-time checks when not in production
         dev: !production,
+        // we'll extract any component CSS out into
+        // a separate file - better for performance
+        css: css => {
+          css.write('bundle.css');
+        },
+        // this makes the Svelte components SSR compatible
+        generate: 'ssr',
+        hydratable: true,
       },
     }),
     // we'll extract any component CSS out into
     // a separate file - better for performance
-    css({ output: "bundle.css" }),
+    css({ output: "public/build/bundle.css" }),
 
     // If you have external dependencies installed from
     // npm, you'll most likely need these plugins. In
@@ -61,6 +69,7 @@ export default {
       dedupe: ["svelte"],
     }),
     commonjs(),
+    
 
     // In dev mode, call `npm run start` once
     // the bundle has been generated
