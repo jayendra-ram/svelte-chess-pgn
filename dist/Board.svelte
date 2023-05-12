@@ -1,7 +1,8 @@
 <script>
+// @ts-nocheck
+
     import MoveViewer from "./MoveViewer.svelte";
     import Piece from './Piece.svelte'
-    import { Canvas } from 'svelte-canvas'
     import {Chess} from "chess.js";
     import { writable } from "svelte/store";
     import { onMount, onDestroy } from 'svelte';
@@ -185,11 +186,15 @@
 
 
   onMount(() => {
-    window.addEventListener('keydown', handleGlobalKeyDown);
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('keydown', handleGlobalKeyDown);
+    }
     loadPGN(pgn);
   });
   onDestroy(() => {
-    window.removeEventListener('keydown', handleGlobalKeyDown);
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('keydown', handleGlobalKeyDown);
+    }  
   });
 
   /**

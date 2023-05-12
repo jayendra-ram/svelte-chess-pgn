@@ -1,4 +1,8 @@
-<script context="module">
+<script>
+// @ts-nocheck
+
+  export let name = '_';
+
   const images = {
     'k': 'https://upload.wikimedia.org/wikipedia/commons/f/f0/Chess_kdt45.svg',
     'q': 'https://upload.wikimedia.org/wikipedia/commons/4/47/Chess_qdt45.svg',
@@ -15,25 +19,13 @@
     '_': 'https://upload.wikimedia.org/wikipedia/commons/1/1d/No_image.svg'
   }
 
-  // Preload images
-  for (const name in images) {
-    (new Image()).src = images[name];
-  }
+  // Compute the image URL directly from the `name` prop
+  $: image_url = images[name];
 </script>
 
-<script>
-  import { Layer } from "svelte-canvas";
-  import { squareSize } from "./chess_utils.js";
-
-  export let name;
-
-  let image_url;
-
-  // Update image_url reactively whenever 'name' changes
-  $: {
-    image_url = images[name];
-  }
-</script>
+<div class="piece">
+  <img src={image_url} alt={name} />
+</div>
 
 <style>
   .piece img {
@@ -41,7 +33,3 @@
     height: 100%;
   }
 </style>
-
-<div class="piece">
-  <img src={image_url} alt={name} />
-</div>
