@@ -9,7 +9,7 @@ a svelte component chess pgn reader
 [![npm](https://img.shields.io/npm/v/svelte-chess-pgn)](https://www.npmjs.com/package/svelte-chess-pgn)
 [![Documentation](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=GitHub%20Pages&logoColor=white)](https://soycid.github.io/svelte-chess-pgn/out/)
 
-### [NOTE: CODE COVERAGE IS NOT WELL SUPPORTED FOR SVELTE, SHIELDS.IO IS INNACURATE](https://github.com/sveltejs/svelte/pull/8269#issuecomment-1441259788)
+### [NOTE: CODE COVERAGE IS NOT WELL SUPPORTED FOR SVELTE, SHIELDS.IO IS INACCURATE](https://github.com/sveltejs/svelte/pull/8269#issuecomment-1441259788)
 
 ## Overview
 
@@ -38,10 +38,12 @@ This is what the PGN reader looks with a game:
 in your import statement:
 
 ```js
-import {PgnReader} from "svelte-chess-pgn";
+<script>
+  import {PgnReader} from "svelte-chess-pgn";
+</script>
 ```
 
-in the <main> tag:
+in the `<main>` tag:
 
 ```js
 <PgnReader pgn={`(insert PGN here)`}/>
