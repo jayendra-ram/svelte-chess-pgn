@@ -15,6 +15,9 @@ a svelte component chess pgn reader
 
 
 if you have a svelte-based blog, let's you show off your epic chess games.
+* supports PGN, FEN reading
+* move viewer lets you browse entire game
+* completely svelte native
 
 ## Installation
 
@@ -25,9 +28,10 @@ npm install svelte-chess-pgn
 
 ## Demo
 
-This is what the PGN reader looks like by default:
+This is what the PGN reader looks with a game:
 
-<img width="584" alt="Screen Shot 2023-04-04 at 11 57 19 PM" src="https://user-images.githubusercontent.com/42985072/229977476-e53143a9-d804-4965-9f39-e706091a656d.png">
+<img width="638" alt="Screen Shot 2023-05-12 at 9 53 07 PM" src="https://github.com/Soycid/svelte-chess-pgn/assets/42985072/3ada9801-c73f-4dae-ac8e-c9fdd60ee745">
+
 
 ## Quickstart
 
