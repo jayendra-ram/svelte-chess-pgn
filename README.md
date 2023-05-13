@@ -9,12 +9,15 @@ a svelte component chess pgn reader
 [![npm](https://img.shields.io/npm/v/svelte-chess-pgn)](https://www.npmjs.com/package/svelte-chess-pgn)
 [![Documentation](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=GitHub%20Pages&logoColor=white)](https://soycid.github.io/svelte-chess-pgn/out/)
 
-### [NOTE: CODE COVERAGE IS NOT WELL SUPPORTED FOR SVELTE, SHIELDS.IO IS INNACURATE](https://github.com/sveltejs/svelte/pull/8269#issuecomment-1441259788)
+### [NOTE: CODE COVERAGE IS NOT WELL SUPPORTED FOR SVELTE, SHIELDS.IO IS INACCURATE](https://github.com/sveltejs/svelte/pull/8269#issuecomment-1441259788)
 
 ## Overview
 
 
 if you have a svelte-based blog, let's you show off your epic chess games.
+* supports PGN, FEN reading
+* move viewer lets you browse entire game
+* completely svelte native
 
 ## Installation
 
@@ -25,19 +28,22 @@ npm install svelte-chess-pgn
 
 ## Demo
 
-This is what the PGN reader looks like by default:
+This is what the PGN reader looks with a game:
 
-<img width="584" alt="Screen Shot 2023-04-04 at 11 57 19 PM" src="https://user-images.githubusercontent.com/42985072/229977476-e53143a9-d804-4965-9f39-e706091a656d.png">
+<img width="638" alt="Screen Shot 2023-05-12 at 9 53 07 PM" src="https://github.com/Soycid/svelte-chess-pgn/assets/42985072/3ada9801-c73f-4dae-ac8e-c9fdd60ee745">
+
 
 ## Quickstart
 
 in your import statement:
 
 ```js
-import {PgnReader} from "svelte-chess-pgn";
+<script>
+  import {PgnReader} from "svelte-chess-pgn";
+</script>
 ```
 
-in the <main> tag:
+in the `<main>` tag:
 
 ```js
 <PgnReader pgn={`(insert PGN here)`}/>
