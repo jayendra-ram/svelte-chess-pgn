@@ -20,7 +20,7 @@ jobs:
             ${{ runner.os }}-npm-
       - name: Run prettier
         run: |-
-          npx prettier --write .
+          npx prettier --write src *.js
 
   build:
     runs-on: ${{ matrix.os }}
