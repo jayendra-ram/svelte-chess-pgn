@@ -3,10 +3,10 @@
 
     import MoveViewer from "./MoveViewer.svelte";
     import Piece from './Piece.svelte'
-    import {Chess} from "chess.js";
     import { writable } from "svelte/store";
     import { onMount, onDestroy } from 'svelte';
     import { flip } from "svelte/animate";
+    const Chess = require('chess.js').Chess; //for jest compatibility
 
 
 

@@ -9,7 +9,10 @@ a svelte component chess pgn reader
 [![npm](https://img.shields.io/npm/v/svelte-chess-pgn)](https://www.npmjs.com/package/svelte-chess-pgn)
 [![Documentation](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=GitHub%20Pages&logoColor=white)](https://soycid.github.io/svelte-chess-pgn/out/)
 
+### [NOTE: CODE COVERAGE IS NOT WELL SUPPORTED FOR SVELTE, SHIELDS.IO IS INNACURATE](https://github.com/sveltejs/svelte/pull/8269#issuecomment-1441259788)
+
 ## Overview
+
 
 if you have a svelte-based blog, let's you show off your epic chess games.
 

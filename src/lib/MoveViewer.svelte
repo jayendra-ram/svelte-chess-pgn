@@ -1,7 +1,7 @@
 <script>
   import { writable } from "svelte/store";
-  import { Chess } from "chess.js";
   import { onMount, afterUpdate } from 'svelte';
+  const Chess = require('chess.js').Chess;
 
   let chess = new Chess();
 
