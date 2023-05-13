@@ -66,7 +66,7 @@
     "start": "sirv public --no-clear",
     "test": "jest --coverage",
     "test_svelte": "playwright test",
-    "format": "npx prettier --write .",
+    "format": "npx prettier --write src",
     "test:watch": "npm run test -- --watchAll",
     "test:coverage": "jest --coverage"
   },
